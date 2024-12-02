@@ -3,7 +3,7 @@ import time
 from pynput import mouse
 
 # ESP32와의 직렬 통신 설정
-ser = serial.Serial('COM6', 9600)
+ser = serial.Serial('COM4', 9600)
 
 # 마우스 클릭 이벤트 핸들러 정의
 def on_click(x, y, button, pressed):
