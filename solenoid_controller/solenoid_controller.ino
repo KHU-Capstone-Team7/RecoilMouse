@@ -10,9 +10,13 @@ void loop() {
     String input = Serial.readStringUntil('\n');
     Serial.println(input);
     if (input == "click") {
-      digitalWrite(solenoidPin, LOW);  // 솔레노이드 동작
-      delay(100);                      // 1초 대기
-      digitalWrite(solenoidPin, HIGH);   // 솔레노이드 종료
+      analogWrite(solenoidPin, 0);  // 솔레노이드 동작
+      delay(50);                      // 1초 대기
+      analogWrite(solenoidPin, 255);   // 솔레노이드 종료
+      delay(50); 
+      analogWrite(solenoidPin, 84);  // 솔레노이드 동작
+      delay(50);                      // 1초 대기
+      analogWrite(solenoidPin, 255);   // 솔레노이드 종료
     }
   }
 }
